@@ -1,12 +1,9 @@
 {
-  "name": "can-cli",
-  "version": "1.0.3",
+  "name": "@zzcan/cli",
+  "version": "1.0.0",
   "description": "react scaffold",
   "bin": {
     "can": "./bin/cli.js"
-  },
-  "scripts": {
-    "prepublish": "echo success"
   },
   "keywords": [
     "react",

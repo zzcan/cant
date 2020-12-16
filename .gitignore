@@ -6,6 +6,6 @@ logs
 *.log
 .eslintcache
 
-/packages/can-ui/es
-/packages/can-ui/lib
-/packages/can-ui/dist
+/packages/*/es
+/packages/*/lib
+/packages/*/dist

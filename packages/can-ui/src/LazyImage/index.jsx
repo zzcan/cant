@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import classnames from 'classnames'
+import styles from './index.less'
 
 export default function LazyImage({
   alt,
@@ -40,7 +42,7 @@ export default function LazyImage({
       alt={alt}
       src={imgSrc}
       srcSet={srcset}
-      className={className}
+      className={classnames(styles.img, className)}
     />
   );
 }

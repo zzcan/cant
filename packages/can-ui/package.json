@@ -1,15 +1,28 @@
 {
-  "name": "@can/ui",
-  "private": true,
+  "name": "@zzcan/ui",
   "version": "1.0.0",
+  "description": "React UI Components",
+  "homepage": "https://github.com/zzcan/cant",
+  "bugs": {
+    "url": "https://github.com/zzcan/cant/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzcan/cant.git"
+  },
   "main": "dist/index.js",
   "browser": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
   "sideEffects": [
     "**/*.css",
     "**/*.less"
   ],
   "scripts": {
-    "prepublish": "father-build"
+    "build": "father-build"
   },
   "author": "zzengcan@foxmail.com",
   "license": "MIT",

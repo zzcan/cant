@@ -3,5 +3,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "father-build": "^1.19.1"
+  }
 }

@@ -1,4 +1,4 @@
-import { LazyImage, ReactSwiper } from '@can/ui'
+import { LazyImage, ReactSwiper } from '@zzcan/ui'
 import imgs from './imgs';
 import placeholder from './placeholder.png';
 import styles from './App.module.css'

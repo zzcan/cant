@@ -1,1 +1,11 @@
 node_modules
+yarn.lock
+/packages/can-cli/__temp__
+.vscode
+logs
+*.log
+.eslintcache
+
+/packages/can-ui/es
+/packages/can-ui/lib
+/packages/can-ui/dist

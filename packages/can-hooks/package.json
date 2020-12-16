@@ -1,7 +1,11 @@
 {
   "name": "can-hooks",
+  "private": true,
   "version": "1.0.0",
   "description": "hooks",
   "author": "zzengcan@foxmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "echo success"
+  }
 }

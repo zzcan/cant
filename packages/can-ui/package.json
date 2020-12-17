@@ -12,6 +12,7 @@
   },
   "main": "dist/index.js",
   "browser": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "lib",
@@ -20,6 +21,16 @@
   "sideEffects": [
     "**/*.css",
     "**/*.less"
+  ],
+  "keywords": [
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
   ],
   "scripts": {
     "build": "father-build"

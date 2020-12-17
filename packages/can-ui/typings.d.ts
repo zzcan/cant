@@ -1,3 +1,3 @@
 declare module '*.css';
 declare module '*.less';
-declare module 'intersection-observer'
+declare module 'intersection-observer';

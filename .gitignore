@@ -1,11 +1,18 @@
 node_modules
 yarn.lock
-/packages/can-cli/__temp__
 .vscode
 logs
 *.log
 .eslintcache
 
-/packages/*/es
-/packages/*/lib
-/packages/*/dist
+packages/*/es
+packages/*/lib
+packages/*/dist
+packages/*/docs-dist
+packages/*/__temp__
+
+# umi
+.umi
+.umi-production
+.umi-test
+.env.local

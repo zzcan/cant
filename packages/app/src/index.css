@@ -8,7 +8,7 @@ body {
 }
 
 img[data-src] {
-  filter: blur(.2em);
+  filter: blur(0.2em);
 }
 
 img {
@@ -16,5 +16,5 @@ img {
   height: 200px;
   object-fit: cover;
   filter: blur(0em);
-  transition: filter .5s;
+  transition: filter 0.5s;
 }

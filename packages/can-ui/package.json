@@ -33,22 +33,24 @@
     "ui"
   ],
   "scripts": {
-    "build": "father-build"
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish"
   },
   "author": "zzengcan@foxmail.com",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "intersection-observer": "^0.11.0",
-    "swiper": "^6.3.5"
-  },
-  "peerDependencies": {
+    "swiper": "^6.3.5",
     "classnames": "^2.2.6",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^16.14.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.6",
-    "@types/react": "^16.14.0"
+    "@types/react": "^16.14.0",
+    "dumi": "^1.0.38"
   }
 }

@@ -1,14 +1,14 @@
 import React, { FC, useRef, useState, useEffect } from 'react';
-import classnames from 'classnames'
-import styles from './index.less'
+import classnames from 'classnames';
+import styles from './index.less';
 
 interface LazyImageProps {
-	alt?: string,
-	src?: string,
-	srcset?: string,
-	srcPlaceholder?: string,
-  className?: string,
-  intersectionOptions?: Object
+  alt?: string;
+  src?: string;
+  srcset?: string;
+  srcPlaceholder?: string;
+  className?: string;
+  intersectionOptions?: Object;
 }
 
 const LazyImage: FC<LazyImageProps> = ({
@@ -54,6 +54,6 @@ const LazyImage: FC<LazyImageProps> = ({
       className={classnames(styles.img, className)}
     />
   );
-}
+};
 
-export default LazyImage
+export default LazyImage;

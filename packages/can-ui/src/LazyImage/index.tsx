@@ -1,18 +1,27 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { FC, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames'
 import styles from './index.less'
 
-export default function LazyImage({
+interface LazyImageProps {
+	alt?: string,
+	src?: string,
+	srcset?: string,
+	srcPlaceholder?: string,
+  className?: string,
+  intersectionOptions?: Object
+}
+
+const LazyImage: FC<LazyImageProps> = ({
   alt,
   src,
   srcset,
   srcPlaceholder,
   intersectionOptions,
   className,
-}) {
+}) => {
   const [intersected, setIntersected] = useState(false);
-  const imgRef = useRef();
-  const observerRef = useRef();
+  const imgRef = useRef() as React.RefObject<HTMLImageElement>;
+  const observerRef = useRef() as React.MutableRefObject<any>;
 
   async function start() {
     if (!window.IntersectionObserver) {
@@ -46,3 +55,5 @@ export default function LazyImage({
     />
   );
 }
+
+export default LazyImage

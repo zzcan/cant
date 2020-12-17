@@ -1,12 +1,11 @@
 import { LazyImage, ReactSwiper } from '@zzcan/ui'
 import imgs from './imgs';
 import placeholder from './placeholder.png';
-import styles from './App.module.css'
 
 export default function App() {
   return (
     <div>
-      <ReactSwiper className={styles.box}>
+      <ReactSwiper>
         {imgs.map(img => (
           <LazyImage
             key={img}

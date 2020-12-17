@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React, { FC, Children } from 'react';
 import classnames from 'classnames';
 import SwiperCore, {
   Lazy,
@@ -7,15 +7,25 @@ import SwiperCore, {
   Autoplay,
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import styles from './index.less';
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Lazy, Pagination, Zoom, Autoplay]);
 
-export default function ReactSwiper({
-  children, params, className, PaginationRender,
-}) {
+interface ReactSwiperProps {
+	params: {
+    [key: string]: any
+  },
+	className?: string,
+	PaginationRender?: React.ReactNode,
+}
+
+const ReactSwiper: FC<ReactSwiperProps> = ({
+  children, 
+  params = {}, 
+  className, 
+  PaginationRender,
+}) => {
   return (
     <Swiper {...params} className={classnames(styles.container, className)}>
       {Children.map(children, (child) => {
@@ -32,6 +42,4 @@ export default function ReactSwiper({
   );
 }
 
-ReactSwiper.defaultProps = {
-  params: {},
-};
+export default ReactSwiper

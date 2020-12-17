@@ -27,14 +27,17 @@
   "author": "zzengcan@foxmail.com",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
     "intersection-observer": "^0.11.0",
     "swiper": "^6.3.5"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
-    "prop-types": ">15.7.2",
-    "react": ">16.14.0",
-    "react-dom": ">16.14.0",
-    "react-router-dom": ">5.2.0"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/react": "^16.14.0"
   }
 }

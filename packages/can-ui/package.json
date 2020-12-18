@@ -36,8 +36,7 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "build": "father-build",
-    "deploy": "npm run docs:build && npm run docs:deploy",
-    "release": "npm run build && npm publish"
+    "clean": "rimraf node_modules"
   },
   "author": "zzengcan@foxmail.com",
   "license": "MIT",

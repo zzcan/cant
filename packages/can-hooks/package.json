@@ -6,6 +6,7 @@
   "author": "zzengcan@foxmail.com",
   "license": "MIT",
   "scripts": {
-    "prepublish": "echo success"
+    "prepublish": "echo success",
+    "clean": "rimraf node_modules"
   }
 }

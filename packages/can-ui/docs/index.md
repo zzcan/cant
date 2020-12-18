@@ -1,1 +1,1 @@
-## Hello zzcan/ui!
+## Hello zzcan-ui

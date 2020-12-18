@@ -2,13 +2,16 @@
   "name": "@zzcan/cli",
   "version": "1.0.0",
   "description": "react scaffold",
-  "bin": {
-    "can": "./bin/cli.js"
-  },
   "keywords": [
     "react",
     "scaffold"
   ],
+  "bin": {
+    "can": "./bin/cli.js"
+  },
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
   "author": "zzengcan@foxmail.com",
   "license": "MIT",
   "dependencies": {

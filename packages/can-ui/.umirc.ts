@@ -1,10 +1,10 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'xyz',
+  title: 'zzcan-ui',
   favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://oss-public.fangdd.com/prod/static/FkWzICdl5qa6Hd2U2f_HgOZRLumk.png?imageView2/0/w/640',
   logo:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+    'https://oss-public.fangdd.com/prod/static/FkWzICdl5qa6Hd2U2f_HgOZRLumk.png?imageView2/0/w/640',
   outputPath: 'docs-dist',
 });

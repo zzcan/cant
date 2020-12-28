@@ -43,9 +43,7 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "classnames": "^2.2.6",
-    "intersection-observer": "^0.11.0",
-    "react": "^16.14.0",
-    "swiper": "^6.3.5"
+    "react": "^16.14.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.6",

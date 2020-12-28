@@ -1,2 +1,1 @@
-export { default as ReactSwiper } from './ReactSwiper';
-export { default as LazyImage } from './LazyImage';
+export { default as Overlay } from './Overlay';

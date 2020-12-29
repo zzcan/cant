@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './index.less';
 
 // type IProps {
 
 // }
 
-const Overlay = () => {
+const Overlay: FC = () => {
   return <div>Overlay</div>;
 };
 

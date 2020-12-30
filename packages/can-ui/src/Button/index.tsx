@@ -10,12 +10,12 @@ type ButtonProps = {
    * @description 类型
    * @default default
    */
-  type?: 'default' | 'primary' | 'info' | 'warning' | 'danger';
+  type?: 'default' | 'primary' | 'success' | 'warning' | 'danger';
   /**
    * @description 尺寸
    * @default normal
    */
-  size?: 'normal' | 'large' | 'small' | 'mini';
+  size?: 'large' | 'normal' | 'small' | 'mini';
   /**
    * @description 按钮根节点的 HTML 标签
    * @default button
@@ -26,6 +26,10 @@ type ButtonProps = {
    * @default false
    */
   plain?: boolean;
+  /**
+   * @description 是否禁用按钮
+   */
+  disabled?: boolean;
   /**
    * @description 自定义类名
    */
@@ -49,6 +53,7 @@ const Button: FC<ButtonProps> = ({
   size = 'normal',
   tag,
   plain,
+  disabled,
   className,
   style,
   children,
@@ -60,6 +65,7 @@ const Button: FC<ButtonProps> = ({
     size,
     {
       plain,
+      disabled,
     },
   ]);
 

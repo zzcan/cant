@@ -1,29 +1,26 @@
-## Button
+---
+title: Button
+order: 1000
 
-<API></API>
+group: 
+  title: Basic Component
+  path: /basic
+  order: 3
+---
 
-## 按钮类型:
+# Button
 
-```tsx
-import React from 'react';
-import { Button } from '@zzcan/ui';
+按钮用于触发一个操作，如提交表单。
 
-export default () => {
-  const Divide = () => (
-    <div style={{ display: 'inline-block', margin: '0 10px' }} />
-  );
-  return (
-    <>
-      <p>按钮类型</p>
-      <Button>默认按钮</Button>
-      <Divide />
-      <Button type="primary">主要按钮</Button>
-      <Divide />
-      <Button type="success">成功按钮</Button>
-      <Button type="warning">警告按钮</Button>
-      <Divide />
-      <Button type="danger">危险按钮</Button>
-    </>
-  );
-};
-```
+## 代码演示
+
+<API />
+
+### 按钮类型:
+
+<code src="./demos/demo1.tsx" />
+
+### 禁用按钮:
+
+<code src="./demos/demo2.tsx" />
+

@@ -1,15 +1,17 @@
-import { LazyImage, ReactSwiper } from '@zzcan/ui';
-import imgs from './imgs';
-import placeholder from './placeholder.png';
+import { Button } from '@zzcan/ui';
+import './index.less'
 
 export default function App() {
   return (
     <div>
-      <ReactSwiper>
-        {imgs.map((img) => (
-          <LazyImage key={img} src={img} srcPlaceholder={placeholder} />
-        ))}
-      </ReactSwiper>
+      <Button
+        type="primary"
+        size="large"
+        onClick={() => console.log(11111111)}
+        className='button'
+      >
+        点击
+      </Button>
     </div>
   );
 }

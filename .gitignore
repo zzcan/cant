@@ -7,6 +7,7 @@ logs
 packages/*/es
 packages/*/lib
 packages/*/dist
+packages/*/build
 packages/*/docs-dist
 packages/*/__temp__
 

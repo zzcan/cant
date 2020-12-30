@@ -1,6 +1,8 @@
 ## Button
 
-按钮类型:
+<API></API>
+
+## 按钮类型:
 
 ```tsx
 import React from 'react';
@@ -13,14 +15,14 @@ export default () => {
   return (
     <>
       <p>按钮类型</p>
-      <Button text="默认按钮" />
+      <Button>默认按钮</Button>
       <Divide />
-      <Button type="primary" text="主要按钮" />
+      <Button type="primary">主要按钮</Button>
       <Divide />
-      <Button type="success" text="成功按钮" />
-      <Button type="warning" text="警告按钮" />
+      <Button type="success">成功按钮</Button>
+      <Button type="warning">警告按钮</Button>
       <Divide />
-      <Button type="danger" text="危险按钮" />
+      <Button type="danger">危险按钮</Button>
     </>
   );
 };

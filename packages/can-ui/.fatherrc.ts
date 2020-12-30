@@ -1,6 +1,10 @@
 export default {
-  esm: 'rollup',
-  cjs: 'rollup',
-  // cssModules: true,
+  esm: 'babel',
+  cjs: 'babel',
+  umd: {
+    minFile: true
+  },
+  // extractCSS: true,
+  lessInBabelMode: true,
   runtimeHelpers: true,
 };

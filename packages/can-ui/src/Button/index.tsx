@@ -1,28 +1,60 @@
 import React, { FC, CSSProperties, MouseEvent, ReactNode } from 'react';
+import cx from 'classnames'
 import createBem from '../utils/createBem';
 import './index.less';
 
 const bem = createBem('cant-button');
 
-export type ButtonProps = {
+type ButtonProps = {
+  /**
+   * @description 类型
+   * @default default
+   */
   type?: 'default' | 'primary' | 'info' | 'warning' | 'danger';
+  /**
+   * @description 尺寸
+   * @default normal
+   */
   size?: 'normal' | 'large' | 'small' | 'mini';
-  text?: string;
+  /**
+   * @description 按钮根节点的 HTML 标签
+   * @default button
+   */
+  tag?: 'button' | 'a';
+  /**
+   * @description 是否为朴素(空心)按钮
+   * @default false
+   */
   plain?: boolean;
+  /**
+   * @description 自定义类名
+   */
+  className?: string;
+  /**
+   * @description 自定义样式
+   */
   style?: CSSProperties;
-  children?: ReactNode;
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  /**
+   * @description 文字或者html元素
+   */
+  children: ReactNode;
+  /**
+   * @description 点击事件
+   */
+  onClick?: (event: MouseEvent) => void;
 };
 
 const Button: FC<ButtonProps> = ({
   type = 'default',
   size = 'normal',
-  text,
+  tag,
   plain,
+  className,
   style,
   children,
   onClick,
 }) => {
+  const Customtag = tag || 'button';
   const classNames = bem([
     type,
     size,
@@ -32,9 +64,13 @@ const Button: FC<ButtonProps> = ({
   ]);
 
   return (
-    <button className={classNames} style={style} onClick={onClick}>
-      <div className={bem('content')}>{text || children}</div>
-    </button>
+    <Customtag
+      className={cx(classNames, className)}
+      style={style}
+      onClick={onClick}
+    >
+      <div className={bem('content')}>{children}</div>
+    </Customtag>
   );
 };
 

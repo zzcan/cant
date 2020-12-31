@@ -1,7 +1,15 @@
 **/*.svg
 **/*.ejs
 **/*.html
+dist
+es
+lib
+demos/
 package.json
+tsconfig.json
+.stylelintrc.json
+.umirc*
+.fatherrc*
 .umi
 .umi-production
 .umi-test

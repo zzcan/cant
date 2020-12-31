@@ -20,4 +20,4 @@ export default function Demo1() {
       <Button type="danger">危险按钮</Button>
     </>
   );
-};
+}

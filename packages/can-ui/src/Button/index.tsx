@@ -75,25 +75,25 @@ const Button: FC<ButtonProps> = ({
   ]);
 
   const handleClick = (e: MouseEvent) => {
-    if(disabled) {
-      if(tag === 'a') {
+    if (disabled) {
+      if (tag === 'a') {
         e.preventDefault();
       }
     } else {
       onClick?.(e);
-      if(tag !== 'button' && url) {
+      if (tag !== 'button' && url) {
         window.location.href = url;
       }
     }
-  }
+  };
 
   const props = {
     className: cx(classNames, className),
     style,
-    onClick: handleClick
-  }
+    onClick: handleClick,
+  };
 
-  if(tag === 'a' && url && !disabled) Object.assign(props, { href: url });
+  if (tag === 'a' && url && !disabled) Object.assign(props, { href: url });
 
   return (
     <Customtag {...props}>

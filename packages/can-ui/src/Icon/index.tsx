@@ -2,7 +2,7 @@ import React, { FC, MouseEvent } from 'react';
 import cx from 'classnames';
 import './index.less';
 
-const baseClass = 'cant-icon'
+const baseClass = 'cant-icon';
 
 type IconProps = {
   /**
@@ -36,8 +36,8 @@ type IconProps = {
   /**
    * @description 点击事件
    */
-  onClick?: (event: MouseEvent) => void
-}
+  onClick?: (event: MouseEvent) => void;
+};
 
 const Icon: FC<IconProps> = ({
   name,
@@ -47,14 +47,14 @@ const Icon: FC<IconProps> = ({
   size = 'inherit',
   tag,
 }) => {
-  const Customtag = tag || 'i'
+  const Customtag = tag || 'i';
 
   const props = {
     className: cx(className, classPrefix, `${classPrefix}-${name}`),
-    style: { color, fontSize: size }
-  }
+    style: { color, fontSize: size },
+  };
 
-  return <Customtag {...props} />
+  return <Customtag {...props} />;
 };
 
 export default Icon;

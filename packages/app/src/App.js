@@ -1,5 +1,5 @@
 import { Button } from '@zzcan/ui';
-import './index.less'
+import './index.less';
 
 export default function App() {
   return (
@@ -8,7 +8,7 @@ export default function App() {
         type="primary"
         size="large"
         onClick={() => console.log(11111111)}
-        className='button'
+        className="button"
       >
         点击
       </Button>

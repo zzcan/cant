@@ -2,11 +2,12 @@
 title: Icon
 order: 1000
 
-group: 
+group:
   title: Basic Component
   path: /basic
   order: 3
 ---
+
 # Icon
 
 代码演示:
@@ -19,19 +20,19 @@ const paneStyle = {
   display: 'flex',
   margin: 20,
   backgroundColor: '#fff',
-  borderRadius: 12
-}
+  borderRadius: 12,
+};
 
 const style = {
-  flex: 1, 
+  flex: 1,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-}
+};
 
 const fontStyle = {
-  fontSize: 12
-}
+  fontSize: 12,
+};
 
 export default () => (
   <div style={paneStyle}>
@@ -56,7 +57,6 @@ export default () => (
       <span style={fontStyle}>loading</span>
     </div>
   </div>
-  
 );
 ```
 

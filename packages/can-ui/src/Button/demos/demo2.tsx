@@ -7,9 +7,16 @@ export default function Demo2() {
   );
   return (
     <>
-      <h4>禁用按钮</h4>
+      <p style={{ fontSize: 20, marginBottom: 10 }}>禁用按钮</p>
 
       <Button disabled>禁用按钮</Button>
+      <Divide />
+      <Button disabled type="primary">primary</Button>
+      <Divide />
+      <Button disabled type="success">success</Button>
+      <Button disabled type="warning">warning</Button>
+      <Divide />
+      <Button disabled type="danger">danger</Button>
     </>
   );
 };

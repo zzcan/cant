@@ -8,7 +8,7 @@ const Divide = () => (
 export default function Demo1() {
   return (
     <>
-      <h4>按钮类型</h4>
+      <p style={{ fontSize: 20, marginBottom: 10 }}>按钮类型</p>
 
       <Button>默认按钮</Button>
       <Divide />

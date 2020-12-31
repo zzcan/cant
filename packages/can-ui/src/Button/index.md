@@ -13,9 +13,6 @@ group:
 按钮用于触发一个操作，如提交表单。
 
 ## 代码演示
-
-<API />
-
 ### 按钮类型:
 
 <code src="./demos/demo1.tsx" />
@@ -24,3 +21,8 @@ group:
 
 <code src="./demos/demo2.tsx" />
 
+### 跳转按钮:
+
+<code src="./demos/demo3.tsx" />
+
+<API />

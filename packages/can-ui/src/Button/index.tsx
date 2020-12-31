@@ -1,5 +1,5 @@
 import React, { FC, CSSProperties, MouseEvent, ReactNode } from 'react';
-import cx from 'classnames'
+import cx from 'classnames';
 import createBem from '../utils/createBem';
 import './index.less';
 
@@ -43,6 +43,10 @@ type ButtonProps = {
    */
   children: ReactNode;
   /**
+   * @description 点击后跳转的链接地址
+   */
+  url?: string;
+  /**
    * @description 点击事件
    */
   onClick?: (event: MouseEvent) => void;
@@ -57,6 +61,7 @@ const Button: FC<ButtonProps> = ({
   className,
   style,
   children,
+  url,
   onClick,
 }) => {
   const Customtag = tag || 'button';
@@ -69,12 +74,29 @@ const Button: FC<ButtonProps> = ({
     },
   ]);
 
+  const handleClick = (e: MouseEvent) => {
+    if(disabled) {
+      if(tag === 'a') {
+        e.preventDefault();
+      }
+    } else {
+      onClick?.(e);
+      if(tag !== 'button' && url) {
+        window.location.href = url;
+      }
+    }
+  }
+
+  const props = {
+    className: cx(classNames, className),
+    style,
+    onClick: handleClick
+  }
+
+  if(tag === 'a' && url && !disabled) Object.assign(props, { href: url });
+
   return (
-    <Customtag
-      className={cx(classNames, className)}
-      style={style}
-      onClick={onClick}
-    >
+    <Customtag {...props}>
       <div className={bem('content')}>{children}</div>
     </Customtag>
   );

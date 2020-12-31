@@ -120,6 +120,10 @@
   &--disabled {
     cursor: not-allowed;
     opacity: @disabled-opacity;
+
+    &::before {
+      display: none;
+    }
   }
 
   // align-items are ignored when flex container is a button in legacy safari

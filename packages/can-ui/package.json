@@ -36,7 +36,8 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "build": "father-build",
-    "prepublish": "yarn run build",
+    "pre-publish": "npm run build",
+    "test": "jest --config .jest.js --cache=false",
     "clean": "rimraf node_modules"
   },
   "author": "zzengcan@foxmail.com",
@@ -47,8 +48,17 @@
     "react": "^16.14.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
     "@types/classnames": "^2.2.6",
+    "babel-jest": "^26.6.3",
     "dumi": "1.1.0-rc.7",
-    "dumi-theme-mobile": "^1.0.0-rc.4"
+    "dumi-theme-mobile": "^1.0.0-rc.4",
+    "jest": "^26.6.3"
   }
 }

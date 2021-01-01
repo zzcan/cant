@@ -4,13 +4,13 @@ logs
 *.log
 .eslintcache
 
-packages/*/es
-packages/*/lib
-packages/*/dist
-packages/*/build
-packages/*/docs-dist
-packages/*/__temp__
-
+es/
+lib/
+dist/
+build/
+docs-dist/
+__temp__/
+coverage/
 # umi
 .umi
 .umi-production

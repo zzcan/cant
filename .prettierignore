@@ -5,8 +5,12 @@ dist
 es
 lib
 demos/
+__test__/
+.jest.js
+jest/
 package.json
 tsconfig.json
+coverage/
 .stylelintrc.json
 .umirc*
 .fatherrc*

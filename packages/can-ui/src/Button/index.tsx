@@ -37,7 +37,7 @@ type ButtonProps = {
   /**
    * @description 自定义样式
    */
-  style?: CSSProperties;
+  customStyle?: CSSProperties;
   /**
    * @description 文字或者html元素
    */
@@ -59,7 +59,7 @@ const Button: FC<ButtonProps> = ({
   plain,
   disabled,
   className,
-  style,
+  customStyle,
   children,
   url,
   onClick,
@@ -89,7 +89,7 @@ const Button: FC<ButtonProps> = ({
 
   const props = {
     className: cx(classNames, className),
-    style,
+    style: customStyle,
     onClick: handleClick,
   };
 

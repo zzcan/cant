@@ -1,6 +1,3 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "rules": {
-    "font-family-no-missing-generic-family-keyword": false
-  }
+  "extends": ["stylelint-config-standard"]
 }

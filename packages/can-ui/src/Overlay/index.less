@@ -1,5 +1,4 @@
 @import '../styles/normalize.less';
-@import '../styles/transition.less';
 
 @baseClass: cant-overlay;
 
@@ -11,4 +10,22 @@
   width: 100%;
   height: 100%;
   background-color: @overlay-background-color;
+
+  &-fade-enter {
+    opacity: @overlay-fade-opacity;
+  }
+
+  &-fade-enter-active {
+    opacity: @overlay-fade-active-opacity;
+    transition: @overlay-fade-transition;
+  }
+
+  &-fade-exit {
+    opacity: @overlay-fade-active-opacity;
+  }
+
+  &-fade-exit-active {
+    opacity: @overlay-fade-opacity;
+    transition: @overlay-fade-transition;
+  }
 }

@@ -1,11 +1,11 @@
-import React, { CSSProperties, FC, ReactNode } from 'react';
+import React, { FC, ReactNode, CSSProperties } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
 import createBem from '../utils/createBem';
 import './index.less';
 
 const baseClass = 'cant-overlay';
-const baseTransitionClass = 'cant-fade';
+const baseTransitionClass = `${baseClass}-fade`;
 const bem = createBem(baseClass);
 const duration = 200;
 

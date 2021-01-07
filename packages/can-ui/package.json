@@ -12,7 +12,7 @@
   },
   "main": "lib/index.js",
   "browser": "es/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/src/index.d.ts",
   "files": [
     "dist",
     "lib",

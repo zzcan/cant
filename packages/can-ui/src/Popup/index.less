@@ -1,0 +1,137 @@
+@import '../styles/normalize.less';
+
+@baseClass: cant-popup;
+
+.@{baseClass} {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: @popup-background-color;
+  -webkit-overflow-scrolling: touch;
+
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  // center fade transition
+  &-fade-enter {
+    opacity: @popup-fade-opacity;
+  }
+
+  &-fade-enter-active {
+    opacity: @popup-fade-active-opacity;
+    transition: @popup-fade-transition;
+  }
+
+  &-fade-exit {
+    opacity: @popup-fade-active-opacity;
+  }
+
+  &-fade-exit-active {
+    opacity: @popup-fade-opacity;
+    transition: @popup-fade-transition;
+  }
+
+  // top right bottom left slide transition
+  &-slide-top-enter {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  &-slide-top-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-top-exit {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-top-exit-active {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &-slide-bottom-enter {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  &-slide-bottom-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-bottom-exit {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-bottom-exit-active {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &-slide-left-enter {
+    transform: translate3d(-100%, -50%, 0);
+    visibility: visible;
+  }
+
+  &-slide-left-enter-active {
+    transform: translate3d(0, -50%, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-left-exit {
+    transform: translate3d(0, -50%, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-left-exit-active {
+    transform: translate3d(-100%, -50%, 0);
+  }
+
+  &-slide-right-enter {
+    transform: translate3d(100%, -50%, 0);
+    visibility: visible;
+  }
+
+  &-slide-right-enter-active {
+    transform: translate3d(0, -50%, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-right-exit {
+    transform: translate3d(0, -50%, 0);
+    transition: transform 300ms;
+  }
+
+  &-slide-right-exit-active {
+    transform: translate3d(100%, -50%, 0);
+  }
+}

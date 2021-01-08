@@ -5,7 +5,7 @@ import './index.less';
 
 const bem = createBem('cant-button');
 
-type ButtonProps = {
+export interface ButtonProps {
   /**
    * @description 类型
    * @default default
@@ -50,7 +50,7 @@ type ButtonProps = {
    * @description 点击事件
    */
   onClick?: (event: MouseEvent) => void;
-};
+}
 
 const Button: FC<ButtonProps> = ({
   type = 'default',

@@ -4,7 +4,7 @@ import './index.less';
 
 const baseClass = 'cant-icon';
 
-type IconProps = {
+export interface IconProps {
   /**
    * @description 图标名称
    */
@@ -37,7 +37,7 @@ type IconProps = {
    * @description 点击事件
    */
   onClick?: (event: MouseEvent) => void;
-};
+}
 
 const Icon: FC<IconProps> = ({
   name,

@@ -18,7 +18,7 @@ const baseClass = 'cant-popup';
 const bem = createBem(baseClass);
 const duration = 200;
 
-type IProps = {
+export interface PopupProps {
   /**
    * @description 是否显示弹出层
    * @default false
@@ -71,7 +71,7 @@ type IProps = {
    * @description 关闭弹出层且动画结束后触发
    */
   onClosed?: (node?: HTMLElement) => void;
-};
+}
 
 function useClickOutside(
   ref: RefObject<HTMLElement | null>,
@@ -93,7 +93,7 @@ function useClickOutside(
   };
 }
 
-const Popup: FC<IProps> = ({
+const Popup: FC<PopupProps> = ({
   show = false,
   overlay = true,
   position = 'center',

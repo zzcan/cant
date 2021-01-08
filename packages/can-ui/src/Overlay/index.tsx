@@ -9,7 +9,7 @@ const baseTransitionClass = `${baseClass}-fade`;
 const bem = createBem(baseClass);
 const duration = 200;
 
-type IProps = {
+export interface OverlayProps {
   /**
    * @description 是否展示遮罩层
    * @default false
@@ -36,9 +36,9 @@ type IProps = {
    * @description 点击事件
    */
   onClick?: (event: MouseEvent) => void;
-};
+}
 
-const Overlay: FC<IProps> = ({
+const Overlay: FC<OverlayProps> = ({
   show,
   zIndex,
   className,

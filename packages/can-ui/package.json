@@ -1,6 +1,6 @@
 {
   "name": "@zzcan/ui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React UI Components",
   "homepage": "https://github.com/zzcan/cant",
   "bugs": {
@@ -12,7 +12,7 @@
   },
   "main": "lib/index.js",
   "browser": "es/index.js",
-  "typings": "dist/src/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "lib",

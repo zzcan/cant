@@ -126,34 +126,25 @@ const Popup: FC<PopupProps> = ({
     style: customStyle,
   };
 
-  const PopupContent = () => (
-    <div>
-      <Overlay
-        show={overlay && show}
-        className={overlayClass}
-        customStyle={overlayStyle}
-        onClick={onClose}
-      />
-
-      <CSSTransition
-        in={show}
-        timeout={duration}
-        classNames={baseTransitionClass}
-        onExited={onClosed}
-        unmountOnExit
-      >
-        <div {...props}>{children}</div>
-      </CSSTransition>
-    </div>
-  );
-
-  if (!container) {
-    return <PopupContent />;
-  }
-
   return (
     <Portal container={container}>
-      <PopupContent />
+      <div>
+        <Overlay
+          show={overlay && show}
+          className={overlayClass}
+          customStyle={overlayStyle}
+          onClick={onClose}
+        />
+        <CSSTransition
+          in={show}
+          timeout={duration}
+          classNames={baseTransitionClass}
+          onExited={onClosed}
+          unmountOnExit
+        >
+          <div {...props}>{children}</div>
+        </CSSTransition>
+      </div>
     </Portal>
   );
 };

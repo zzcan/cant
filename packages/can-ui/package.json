@@ -1,6 +1,6 @@
 {
   "name": "@zzcan/ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React UI Components",
   "homepage": "https://github.com/zzcan/cant",
   "bugs": {
@@ -46,9 +46,11 @@
     "@babel/runtime": "^7.12.5",
     "@types/react-transition-group": "^4.4.0",
     "classnames": "^2.2.6",
-    "react": "^16.14.0",
-    "react-dom": "16.14.0",
     "react-transition-group": "^4.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.14.0",
+    "react-dom": ">=16.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

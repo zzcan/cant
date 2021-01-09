@@ -1,4 +1,4 @@
-import { FC, ReactNode, CSSProperties } from 'react';
+import React, { FC, ReactNode, CSSProperties } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
 import createBem from '../utils/createBem';

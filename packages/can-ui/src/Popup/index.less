@@ -10,6 +10,17 @@
   -webkit-overflow-scrolling: touch;
   z-index: @popup-z-index;
 
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    outline: 0;
+    z-index: @popup-wrapper-z-index;
+  }
+
   &--center {
     top: 50%;
     left: 50%;

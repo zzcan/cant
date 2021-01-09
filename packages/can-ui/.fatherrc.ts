@@ -4,7 +4,13 @@ export default {
   umd: {
     minFile: true,
   },
-  // extractCSS: true,
   lessInBabelMode: true,
   runtimeHelpers: true,
+  autoprefixer: {
+    browsers: [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+  },
 };

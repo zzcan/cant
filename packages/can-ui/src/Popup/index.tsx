@@ -1,12 +1,4 @@
-import React, {
-  FC,
-  RefObject,
-  ReactNode,
-  CSSProperties,
-  useRef,
-  useEffect,
-  useCallback,
-} from 'react';
+import React, { FC, ReactNode, CSSProperties, MouseEvent } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
 import Portal from '../Portal';
@@ -62,35 +54,19 @@ export interface PopupProps {
   /**
    * @description 指定挂载的节点
    */
-  container?: HTMLElement;
+  container?: HTMLElement | false;
   /**
-   * @description 关闭后回调
+   * @description 点击弹出层时触发
+   */
+  onClick?: (event: MouseEvent) => void;
+  /**
+   * @description 关闭弹出层时触发
    */
   onClose?: () => void;
   /**
    * @description 关闭弹出层且动画结束后触发
    */
-  onClosed?: (node?: HTMLElement) => void;
-}
-
-function useClickOutside(
-  ref: RefObject<HTMLElement | null>,
-  handler: Function,
-) {
-  useEffect(() => {
-    // dom节点渲染后再绑定事件
-    if (ref.current) {
-      window.addEventListener('click', handleClickOutside);
-      return () => window.removeEventListener('click', handleClickOutside);
-    }
-  }, [ref, handler]);
-
-  const handleClickOutside = (e: MouseEvent) => {
-    if (!ref.current || ref.current.contains(e.target as Node)) {
-      return;
-    }
-    handler(e);
-  };
+  onClosed?: (node: HTMLElement) => void;
 }
 
 const Popup: FC<PopupProps> = ({
@@ -104,49 +80,51 @@ const Popup: FC<PopupProps> = ({
   closeOnClickOutside = true,
   children,
   container,
+  onClick,
   onClose,
   onClosed,
 }) => {
-  const popupRef = useRef(null);
-
-  const onClickOutside = useCallback(() => {
-    if (closeOnClickOutside) onClose?.();
-  }, [onClose]);
-
-  useClickOutside(popupRef, onClickOutside);
-
   const baseTransitionClass =
     position === 'center'
       ? `${baseClass}-fade`
       : `${baseClass}-slide-${position}`;
 
   const props = {
-    ref: popupRef,
     className: cx(bem([position]), className),
     style: customStyle,
+    onClick,
   };
 
-  return (
-    <Portal container={container}>
-      <div>
-        <Overlay
-          show={overlay && show}
-          className={overlayClass}
-          customStyle={overlayStyle}
-          onClick={onClose}
-        />
-        <CSSTransition
-          in={show}
-          timeout={duration}
-          classNames={baseTransitionClass}
-          onExited={onClosed}
-          unmountOnExit
-        >
-          <div {...props}>{children}</div>
-        </CSSTransition>
-      </div>
-    </Portal>
+  const renderPopupContent = (
+    <div className={bem('root')}>
+      <Overlay
+        show={overlay && show}
+        className={overlayClass}
+        customStyle={overlayStyle}
+        onClick={closeOnClickOutside ? onClose : void 0}
+      />
+      <div
+        className={bem('wrapper')}
+        onClick={closeOnClickOutside ? onClose : void 0}
+        style={{ display: overlay || !show ? 'none' : undefined }}
+      />
+      <CSSTransition
+        in={show}
+        timeout={duration}
+        classNames={baseTransitionClass}
+        onExited={onClosed}
+        unmountOnExit
+      >
+        <div {...props}>{children}</div>
+      </CSSTransition>
+    </div>
   );
+
+  if (!container) {
+    return renderPopupContent;
+  }
+
+  return <Portal container={container}>{renderPopupContent}</Portal>;
 };
 
 export default Popup;

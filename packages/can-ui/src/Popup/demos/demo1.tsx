@@ -31,20 +31,20 @@ export default function Demo1() {
         内容
       </Popup>
 
-      <Popup show={visible2} position="top" onClose={() => setVisible2(false)}>
+      <Popup show={visible2} overlay={false} position="top" onClose={() => setVisible2(false)}>
         顶部弹出
       </Popup>
 
-      <Popup show={visible3} position="right" onClose={() => setVisible3(false)}>
-        顶部弹出
+      <Popup className='right'  show={visible3} position="right" onClose={() => setVisible3(false)}>
+        右侧弹出
       </Popup>
 
       <Popup show={visible4} position="bottom" onClose={() => setVisible4(false)}>
-        顶部弹出
+        底部弹出
       </Popup>
 
-      <Popup show={visible5} position="left" onClose={() => setVisible5(false)}>
-        顶部弹出
+      <Popup className='left' show={visible5} position="left" onClose={() => setVisible5(false)}>
+        左侧弹出
       </Popup>
     </>
   )

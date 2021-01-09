@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties, MouseEvent, ReactNode } from 'react';
+import { FC, CSSProperties, MouseEvent, ReactNode } from 'react';
 import cx from 'classnames';
 import createBem from '../utils/createBem';
 import './index.less';

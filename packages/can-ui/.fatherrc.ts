@@ -6,11 +6,4 @@ export default {
   },
   lessInBabelMode: true,
   runtimeHelpers: true,
-  autoprefixer: {
-    browsers: [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-  },
 };

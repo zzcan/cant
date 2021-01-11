@@ -21,6 +21,7 @@
     "es",
     "dist",
     "typings",
+    "**/demos",
     "**/__test__",
     "test"
   ]

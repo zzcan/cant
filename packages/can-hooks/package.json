@@ -1,12 +1,43 @@
 {
   "name": "@zzcan/hooks",
-  "private": true,
   "version": "1.0.0",
-  "description": "hooks",
+  "description": "react hooks library",
+  "homepage": "https://github.com/zzcan/cant",
+  "bugs": {
+    "url": "https://github.com/zzcan/cant/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzcan/cant.git"
+  },
+  "main": "lib/index.js",
+  "browser": "es/index.js",
+  "types": "dis/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "react hooks"
+  ],
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "build": "father-build",
+    "pre-publish": "npm run build",
+    "test": "jest --config .jest.js --cache=false",
+    "clean": "rimraf node_modules"
+  },
   "author": "zzengcan@foxmail.com",
   "license": "MIT",
-  "scripts": {
-    "prepublish": "echo success",
-    "clean": "rimraf node_modules"
+  "peerDependencies": {
+    "react": ">=16.14.0",
+    "react-dom": ">=16.14.0"
+  },
+  "devDependencies": {
+    "dumi": "^1.1.3"
   }
 }
+
